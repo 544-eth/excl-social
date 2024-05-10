@@ -4,10 +4,12 @@ import { TbHomeDot } from "react-icons/tb";
 import { LuBell } from "react-icons/lu";
 import { AiOutlineMessage } from "react-icons/ai";
 import { CiBookmarkPlus } from "react-icons/ci";
-import { FaRegUser } from "react-icons/fa";
+import { FiClipboard } from "react-icons/fi";
 import { IoSettings } from "react-icons/io5";
 import { CgBee } from "react-icons/cg";
 import { BsThreeDots } from 'react-icons/bs';
+import { IoWalletOutline } from "react-icons/io5";
+
 
 
 const NAVIGATION_ITEMS = [
@@ -26,12 +28,12 @@ const NAVIGATION_ITEMS = [
     icon: AiOutlineMessage
   },
   {
-    title: 'Bookmarks',
-    icon:  CiBookmarkPlus
+    title: 'Clips',
+    icon:  FiClipboard
   },
   {
-    title: 'Profile',
-    icon: FaRegUser
+    title: 'Wallet',
+    icon: IoWalletOutline
   },
   {
     title: 'Settings',
@@ -42,7 +44,7 @@ const NAVIGATION_ITEMS = [
 const LeftSidebar = () => {
   return (
     
-        <div className=' fixed w-[275px] flex flex-col h-screen  my-4'>
+        <div className=' w-[25%] sticky top-0 flex flex-col items-stretch h-screen py-2 px-8'>
                   
                   <div className=' flex flex-col items-stretch h-full text-white space-y-4  '>
                     <Link href='/'>
@@ -51,7 +53,7 @@ const LeftSidebar = () => {
                     {NAVIGATION_ITEMS.map((item) => (
                       <Link 
                       key={item.title} href={`/${item.title.toLowerCase()}`} 
-                      className=' hover:bg-white/30 text-[23px] hover:font-semibold transition duration-300 flex items-center justify-start w-fit space-x-4 rounded-3xl py-2 px-6' >
+                      className=' hover:bg-white/30 text-[23px] focus:font-semibold transition duration-300 flex items-center justify-start w-fit space-x-4 rounded-3xl py-2 px-6' >
                         <div>
                           
                           <item.icon />
@@ -61,17 +63,17 @@ const LeftSidebar = () => {
                     ))
                       
                     }
-                    <button className='  rounded-full text-black bg-[gold] p-4 text-2xl m-4 text-center hover:bg-opacity-80 transition duration-300'>Buzz</button>
+                    <button className='  rounded-full text-black bg-[gold] text-2xl p-4 w-[70%] text-center hover:bg-opacity-80 transition duration-300'>Buzz</button>
                   </div>
 
 
-                    <button className=' flex items-center space-x-2 rounded-full p-4 m-4 bg-transparent text-2xl text-center hover:bg-white/10 transition duration-300 justify-between text-white'>
+                    <button className=' flex items-center space-x-16 rounded-full p-4 my-4 w-fit bg-transparent text-2xl text-center hover:bg-white/10 transition duration-300 justify-between text-white'>
 
                       <div className=' flex items-center space-x-2 ' >
                           <div className=' rounded-full bg-slate-400 w-12 h-12'></div>
                           <div className=' text-left text-sm'>
                             <div className=' font-semibold'>Francis</div>
-                            <div className=' text-xs'>@Francis</div>
+                            <div className=' text-xs text-gray-500'>@Francis</div>
                           </div>
                       </div>
 
