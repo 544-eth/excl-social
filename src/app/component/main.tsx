@@ -6,7 +6,7 @@ import { BiBookmark, BiComment, BiRepost, BiShare } from 'react-icons/bi';
 
 const MainPage = () => {
   return (
-    <main className=' flex w-[50%] h-full min-h-screen flex-col border-l border-r border-[gold]  text-white'>
+    <main className=' flex w-[40%] h-full min-h-screen flex-col border-l border-r border-[gold]  text-white'>
                 <h1 className=' text-xl font-bold p-6 backdrop-blur bg-black/10 sticky top-0'>Home</h1>
                 <div className=' flex items-stretch space-x-2 border-t px-4  border-[gold] py-6 relative'>
                   <div className=' w-12 h-12 bg-slate-400 flex-none rounded-full'></div>
